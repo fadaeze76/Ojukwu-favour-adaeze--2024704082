@@ -1,0 +1,20 @@
+def calculate_grade(score):
+    if 70 <= score <= 100:
+        return "A"
+    elif 60 <= score <= 69:
+        return "B"
+    elif 50 <= score <= 59:
+        return "C"
+    elif 45 <= score <= 49:
+        return "D"
+    elif 40 <= score <= 44:
+        return "E"
+    elif 0 <= score <= 39:
+        return "F"
+    else:
+        return "Invalid score"num_scores = int(input("How many scores do you want to grade? "))
+
+for i in range(num_scores):
+    score = int(input(f"Enter score {i + 1}: "))
+    grade = calculate_grade(score)
+    print(f"Score: {score} → Grade: {grade}")
